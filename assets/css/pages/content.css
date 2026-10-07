@@ -49,3 +49,46 @@
   color: var(--muted);
   font-weight: 600;
 }
+
+/* How to: a jump list, then one short guide per task. */
+.toc { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: var(--space-2) 0 0; margin: 0; list-style: none; }
+.toc a {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+.toc a:hover { border-color: var(--action); }
+
+.guide { max-width: var(--measure); padding-block: var(--space-4) 0; scroll-margin-top: var(--space-4); }
+.guide > * + * { margin-top: var(--space-2); }
+.guide h2 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); }
+.guide .intro { color: var(--muted); }
+.steps { list-style: none; counter-reset: step; padding: 0; display: grid; gap: 0.75rem; }
+.steps > li { counter-increment: step; display: grid; grid-template-columns: 2rem 1fr; gap: 0.75rem; align-items: start; }
+.steps > li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.guide .tip {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.guide .tip strong { color: var(--ink); }
