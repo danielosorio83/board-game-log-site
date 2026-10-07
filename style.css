@@ -1,0 +1,26 @@
+:root { --bg:#faf3e3; --card:#fffdf8; --ink:#2b1410; --muted:#6d5650; --accent:#9d1e11; --soft:#f5e3b3; --line:#e6d8b8; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1c1412; --card:#261c19; --ink:#f6ece0; --muted:#bfaa9e; --accent:#e0705f; --soft:#3a2b22; --line:#4a3a30; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.55 -apple-system, "SF Pro Text", system-ui, sans-serif; }
+header, main, footer { max-width:880px; margin:0 auto; padding:0 20px; }
+header { display:flex; justify-content:space-between; align-items:center; padding-block:20px; gap:12px; flex-wrap:wrap; }
+header a.brand { font-weight:800; font-size:20px; color:var(--ink); text-decoration:none; }
+nav a { margin-left:16px; color:var(--muted); text-decoration:none; }
+nav a:hover { color:var(--accent); }
+h1 { font-size:clamp(32px,6vw,52px); line-height:1.1; margin:24px 0 12px; }
+h2 { font-size:26px; margin:40px 0 12px; }
+h3 { font-size:19px; margin:24px 0 6px; }
+p, li { max-width:68ch; }
+.lead { font-size:20px; color:var(--muted); }
+.cta { display:inline-block; background:var(--accent); color:#fff; padding:12px 22px; border-radius:12px; text-decoration:none; font-weight:700; margin:12px 8px 12px 0; }
+.cta.alt { background:var(--soft); color:var(--ink); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin:20px 0; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; }
+.card h3 { margin-top:0; }
+.video { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:14px; }
+.video video, .video iframe { width:100%; aspect-ratio:9/16; max-height:560px; border:0; border-radius:12px; background:#000; }
+.video .soon { aspect-ratio:9/16; max-height:560px; display:grid; place-items:center; color:var(--muted); border:1px dashed var(--line); border-radius:12px; text-align:center; padding:12px; }
+footer { padding-block:40px; color:var(--muted); font-size:15px; }
+footer a { color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:12px 0; }
+th, td { text-align:left; border-bottom:1px solid var(--line); padding:8px 6px; vertical-align:top; }
