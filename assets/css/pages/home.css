@@ -1,0 +1,81 @@
+/* Home. One memorable thing: the logo, over a field of hexagons. Everything around it stays quiet. */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding-block: var(--space-5) var(--space-6);
+  overflow: hidden;
+}
+
+/* The hexagon field takes the page's own line color and fades out toward the text. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 38%;
+  z-index: -1;
+  background: var(--line);
+  -webkit-mask-image: url("/assets/img/hex-pattern.svg");
+  mask-image: url("/assets/img/hex-pattern.svg");
+  -webkit-mask-size: 55px 96px;
+  mask-size: 55px 96px;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, var(--ground) 36%, transparent 78%), linear-gradient(0deg, var(--ground), transparent 30%);
+}
+
+.hero .container {
+  display: grid;
+  gap: var(--space-4) var(--space-5);
+  align-items: center;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+}
+
+.hero__text { display: grid; gap: var(--space-3); justify-items: start; }
+.hero__text h1 { max-width: 11ch; }
+.hero__lead { max-width: 40ch; font-size: var(--text-lg); line-height: 1.5; color: var(--muted); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+
+.hero__logo {
+  justify-self: center;
+  width: min(100%, 19rem);
+  aspect-ratio: 1;
+  border-radius: 23.5%;
+  box-shadow: 0 2.5rem 4rem -2rem rgba(43, 21, 17, 0.55), 0 0 0 0.5rem var(--ground);
+  transform: rotate(-4deg);
+}
+
+@media (max-width: 52rem) {
+  .hero { padding-block: var(--space-4) var(--space-5); }
+  .hero .container { grid-template-columns: 1fr; }
+  .hero::before { inset: 0; }
+  .hero::after { background: linear-gradient(0deg, var(--ground) 8%, transparent 70%), linear-gradient(180deg, var(--ground), transparent 40%); }
+  .hero__logo { grid-row: 1; width: min(55%, 12rem); justify-self: start; }
+}
+
+.section { padding-block: var(--space-5) 0; }
+.section__head { display: grid; gap: var(--space-1); margin-bottom: var(--space-4); max-width: 34rem; }
+.section__head p { color: var(--muted); }
+
+/* What the app does: a plain list, not a wall of cards. */
+.features { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+  gap: var(--space-1) var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+.feature h3 { font-size: var(--text-h3); }
+.feature p { color: var(--muted); max-width: 52ch; }
+@media (max-width: 40rem) { .feature { grid-template-columns: 1fr; } }
+
+.keep { display: grid; gap: var(--space-2); }
+.keep p { max-width: 52ch; }
+.keep a { font-weight: 700; }
+
+.names { display: grid; gap: var(--space-2); max-width: var(--measure); }
+.names p { color: var(--muted); }

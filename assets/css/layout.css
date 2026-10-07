@@ -1,0 +1,56 @@
+/* The frame every page shares: width, header and footer. */
+
+.container {
+  width: min(100% - 2 * clamp(1rem, 4vw, 2rem), var(--page));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: var(--space-2);
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.site-footer {
+  margin-top: var(--space-6);
+  padding-block: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--line);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.site-footer .container {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-legal {
+  display: grid;
+  gap: var(--space-1);
+  max-width: var(--measure);
+}
+
+.footer-legal a, .footer-nav a { color: inherit; }

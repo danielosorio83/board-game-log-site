@@ -3,33 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Board Game Log: keep track of every board game you play</title>
-<meta name="description" content="Record who played and who won, score matches live with dice and counters, see your stats, and share a group with friends. Works without an account.">
-<link rel="stylesheet" href="style.css">
+<title>Board Game Log: keep score of every game night</title>
+<meta name="description" content="An iPhone app to record who played and who won, score matches live with dice and counters, and see your stats. It works without an account.">
+<link rel="canonical" href="https://boardgamelog.app/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf3e3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f0f0c" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Board Game Log">
+<meta property="og:title" content="Board Game Log: keep score of every game night">
+<meta property="og:description" content="An iPhone app to record who played and who won, score matches live with dice and counters, and see your stats. It works without an account.">
+<meta property="og:url" content="https://boardgamelog.app/">
+<meta property="og:image" content="https://boardgamelog.app/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/layout.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/pages/home.css">
 </head>
 <body>
-<header><a class="brand" href="index.html">Board Game Log</a><nav><a href="how-to.html">How to</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
-<main>
-<h1>Keep track of every board game you play.</h1>
-<p class="lead">Who played, who won, scores, dice, time. Pick one of 44 games or add your own, record a match in three taps, or score it live as you play.</p>
-<p><a class="cta" href="#get">Get the app</a><a class="cta alt" href="how-to.html">See how it works</a></p>
-
-<h2>What it does</h2>
-<div class="grid">
-<div class="card"><h3>Any game</h3><p>44 ready-made games from Catan to Yahtzee, or type a name and start. Add scores, counters, dice, teams and hidden roles when you want them.</p></div>
-<div class="card"><h3>Live matches</h3><p>Score as you play with +X per category, counters, dice you can roll or enter, a timer, undo, and an alert when someone reaches the goal.</p></div>
-<div class="card"><h3>Your stats</h3><p>Wins and win rate, streaks, head to head, scores, dice luck, time per turn, and more once you have a few matches.</p></div>
-<div class="card"><h3>Catan, in depth</h3><p>Resources by roll, barbarians, Longest Road and Largest Army, board photos and a scan of the board layout.</p></div>
-<div class="card"><h3>Friends, if you want</h3><p>Sign in to share a group, a game, or a match in progress. A friend can follow the score from their own phone and even roll the dice.</p></div>
-<div class="card"><h3>Yours first</h3><p>Everything works without an account and stays on your phone. Backups are a file you keep.</p></div>
+<a class="skip-link" href="#content">Skip to the content</a>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="/"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Board Game Log</a>
+<nav aria-label="Main"><ul class="nav">
+<li><a href="/how-to/">How to</a></li>
+<li><a href="/support/">Support</a></li>
+</ul></nav>
 </div>
+</header>
+<main id="content">
+<section class="hero" aria-labelledby="hero-title">
+<div class="container">
+<div class="hero__text">
+<h1 id="hero-title">Keep score of every game night.</h1>
+<p class="hero__lead">Board Game Log is an iPhone app to record who played and who won, score a match as you play, and see how everyone is doing. It works on your phone, with no account.</p>
+<div class="hero__actions">
+<span class="status">Coming soon to the App Store</span>
+<a class="button button--plain" href="/how-to/">See how it works</a>
+</div>
+</div>
+<img class="hero__logo" src="/assets/img/logo-512.png" width="512" height="512" alt="The Board Game Log icon: a red hexagon with the name on a gold tile">
+</div>
+</section>
 
-<h2 id="get">Get the app</h2>
-<p>Board Game Log for iPhone. <em>The App Store link will be here when version 2.0 is released.</em></p>
+<section class="section" aria-labelledby="does">
+<div class="container">
+<div class="section__head">
+<h2 id="does">What it does</h2>
+<p>For the games you really play, from the big box to the card game on the kitchen table.</p>
+</div>
+<ul class="features">
+<li class="feature"><h3>Any game</h3><p>44 ready-made games from Catan to Yahtzee, or type a name and start. Add scores, counters, dice, teams and hidden roles when you want them.</p></li>
+<li class="feature"><h3>Record in three taps</h3><p>Pick the group, add the players in table order, tap the winner. Points, time and notes can come later, or never.</p></li>
+<li class="feature"><h3>Play live</h3><p>Score as you play with +X per category, counters, dice you can roll or enter, a timer, undo, and an alert when someone reaches the goal.</p></li>
+<li class="feature"><h3>Your stats</h3><p>Wins and win rate, streaks, head to head, scores, dice luck, time per turn, and more once you have a few matches. Each group has its own, and a person who plays in several can be seen as one.</p></li>
+<li class="feature"><h3>Catan, in depth</h3><p>Resources by roll, barbarians, Longest Road and Largest Army with their points, board photos and a scan of the board layout.</p></li>
+<li class="feature"><h3>Friends, if you want</h3><p>Sign in to share a group, a game, or a match in progress. A friend can follow the score from their own phone and even roll the dice.</p></li>
+</ul>
+</div>
+</section>
 
-<h2>Questions</h2>
-<p>Read <a href="how-to.html">the how-to videos</a>, the <a href="support.html">support page</a>, or the <a href="privacy.html">privacy policy</a>.</p>
+<section class="section" aria-labelledby="keep">
+<div class="container">
+<div class="callout keep">
+<h2 id="keep">Yours first</h2>
+<p>Everything works without an account and stays on your phone. Backups are a file you keep. Sign in only if you want to share, or keep two phones in sync. There are no ads and no tracking.</p>
+<p><a href="/privacy/">Read the privacy policy</a></p>
+</div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="names">
+<div class="container">
+<div class="names">
+<h2 id="names">Game names</h2>
+<p>The names of the games, expansions and scenarios shown in the app are trademarks or the property of their respective owners, publishers and authors. They are used only to identify the games you play. Board Game Log is an independent app and is not affiliated with, sponsored by or endorsed by any of them. Please buy and play the official games.</p>
+<p><a href="/terms/#game-names">Read the terms</a></p>
+</div>
+</div>
+</section>
 </main>
-<footer>Board Game Log &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="support.html">Support</a></footer>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-top">
+<a class="brand" href="/"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Board Game Log</a>
+<nav aria-label="Footer"><ul class="footer-nav">
+<li><a href="/how-to/">How to</a></li>
+<li><a href="/support/">Support</a></li>
+<li><a href="/privacy/">Privacy</a></li>
+<li><a href="/terms/">Terms</a></li>
+<li><a href="mailto:support@boardgamelog.app">support@boardgamelog.app</a></li>
+</ul></nav>
+</div>
+<div class="footer-legal">
+<p>&copy; 2026 Board Game Log. All rights reserved. Developed and published by Daniel Osorio.</p>
+<p>Game names are trademarks or the property of their respective owners and are used only to identify the games. Board Game Log is an independent app and is not affiliated with or endorsed by them. <a href="/terms/#game-names">Read more</a>.</p>
+</div>
+</div>
+</footer>
 </body>
 </html>

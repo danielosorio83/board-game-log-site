@@ -1,0 +1,51 @@
+/* Pages that are mostly reading: how to, support, privacy and terms. */
+
+.page-head { padding-block: var(--space-5) var(--space-3); }
+.page-head .container { display: grid; gap: var(--space-2); }
+.page-head h1 { font-size: clamp(2.2rem, 1.4rem + 3.6vw, 3.8rem); }
+.page-head .lead { max-width: 50ch; font-size: var(--text-lg); color: var(--muted); }
+.page-head .updated { font-size: var(--text-sm); color: var(--muted); }
+
+.prose { max-width: var(--measure); padding-block: var(--space-3) 0; }
+.prose > * + * { margin-top: var(--space-2); }
+.prose h2 { margin-top: var(--space-4); font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); }
+.prose h3 { margin-top: var(--space-3); font-size: 1.2rem; }
+.prose ul { padding-left: 1.25rem; }
+.prose li + li { margin-top: 0.35rem; }
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.prose th, .prose td { padding: 0.65rem 0.75rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.prose th { font-family: var(--font-display); font-weight: 700; }
+
+.video-grid {
+  display: grid;
+  gap: var(--space-4) var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  padding: var(--space-3) 0 0;
+  margin: 0;
+  list-style: none;
+}
+/* Title, text and video line up across a row: each card shares the rows of the grid. */
+.video-card { display: grid; gap: 0.5rem; align-content: start; }
+@supports (grid-template-rows: subgrid) {
+  .video-card { grid-row: span 3; grid-template-rows: subgrid; }
+}
+.video-card h2 { font-size: 1.2rem; }
+.video-card p { color: var(--muted); font-size: 0.95rem; }
+.video-card iframe, .video-card .soon {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius-md);
+}
+.video-card .soon {
+  display: grid;
+  place-items: center;
+  background: var(--soft);
+  color: var(--muted);
+  font-weight: 600;
+}
