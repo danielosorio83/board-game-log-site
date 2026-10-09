@@ -209,11 +209,14 @@ T = {
 }
 
 PRIVACY_H1 = "Política de privacidad"
-PRIVACY_LEAD = "Board Game Log guarda tus partidas en tu teléfono. Solo recoge datos si decides iniciar sesión y activar la sincronización en la nube, y nunca los usa para publicidad ni para rastrearte."
+PRIVACY_LEAD = "Board Game Log guarda tus partidas en tu teléfono. Solo recoge datos si decides iniciar sesión y activar la sincronización en la nube, o compartir datos de uso anónimos, y nunca los usa para publicidad ni para rastrearte."
 PRIVACY = """
 <h2>Sin cuenta</h2>
 <p>Tus juegos, jugadores, partidas y fotos se guardan solo en tu teléfono; ninguno se envía a ningún sitio. Las copias de seguridad son un archivo que creas y guardas tú.</p>
 <p>La app sí le pide a Google Firebase unos pocos ajustes de encendido y apagado que dicen qué funciones ofrece (Firebase Remote Config). Para responder, Firebase usa un identificador de instalación que Google da a la app e información básica de la app y del teléfono, como la versión de la app, la versión del sistema y el idioma. No incluye tu nombre ni nada de lo que registraste.</p>
+
+<h2>Datos de uso anónimos (opcional)</h2>
+<p>Está desactivado por defecto. Puedes activarlo en la bienvenida o en Ajustes &rarr; Privacidad, y desactivarlo cuando quieras. Si está activado, la app envía unos pocos recuentos a través de Google Firebase Analytics para saber qué mejorar: por ejemplo que se guardó una partida (registro rápido o en vivo), cuánto tardó una actualización, qué página de estadísticas se abrió o si un ajuste está activado. Nunca incluye los nombres de tus juegos, jugadores o grupos, tu cuenta ni tu correo, y no usa el identificador de publicidad ni te rastrea en otras apps. Google asigna a la app un identificador anónimo para contar instalaciones. Al desactivar la opción se detiene el envío y se pide a Google que borre los datos de ese identificador; eliminar tu cuenta hace lo mismo.</p>
 
 <h2>Con una cuenta</h2>
 <p>Puedes iniciar sesión con Apple o Google (opcional) y activar la sincronización en la nube. Entonces la app guarda esto en Google Firebase, en la cuenta con la que iniciaste sesión:</p>

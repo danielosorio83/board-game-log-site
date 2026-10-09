@@ -214,11 +214,14 @@ T = {
 }
 
 PRIVACY_H1 = "Privacy policy"
-PRIVACY_LEAD = "Board Game Log keeps your matches on your phone. It collects data only if you choose to sign in and turn on cloud sync, and it never uses it for advertising or tracking."
+PRIVACY_LEAD = "Board Game Log keeps your matches on your phone. It collects data only if you choose to sign in and turn on cloud sync, or to share anonymous usage data, and it never uses it for advertising or tracking."
 PRIVACY = """
 <h2>Without an account</h2>
 <p>Your games, players, matches and photos are stored on your phone only; none of them is ever sent anywhere. Backups are a file you create and keep.</p>
 <p>The app does ask Google Firebase for a few on/off settings that say which features it offers (Firebase Remote Config). To answer, Firebase uses an installation identifier that Google gives to the app and basic information about the app and the phone, such as the app version, the system version and the language. It does not include your name or anything you recorded.</p>
+
+<h2>Anonymous usage data (optional)</h2>
+<p>Off by default. You can turn it on in the welcome or in Settings &rarr; Privacy, and off again at any time. When it is on, the app sends a few counts through Google Firebase Analytics to learn what to improve: for example that a match was saved (quick log or live), how long an update took, which stats page was opened, or whether a setting is on or off. It never includes the names of your games, players or groups, your account or your email, and it does not use the advertising identifier or track you across other apps. Google assigns the app an anonymous identifier to count installs. Turning the option off stops it and asks Google to delete the data it holds for that identifier; deleting your account does the same.</p>
 
 <h2>With an account</h2>
 <p>You can sign in with Apple or Google (optional) and turn on cloud sync. Then the app stores this in Google Firebase, in the account you signed in with:</p>

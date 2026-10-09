@@ -209,11 +209,14 @@ T = {
 }
 
 PRIVACY_H1 = "Politique de confidentialité"
-PRIVACY_LEAD = "Board Game Log garde vos parties sur votre téléphone. Elle ne collecte de données que si vous choisissez de vous connecter et d'activer la synchronisation dans le cloud, et ne les utilise jamais pour la publicité ni le suivi."
+PRIVACY_LEAD = "Board Game Log garde vos parties sur votre téléphone. Elle ne collecte de données que si vous choisissez de vous connecter et d'activer la synchronisation dans le cloud, ou de partager des données d'usage anonymes, et ne les utilise jamais pour la publicité ni le suivi."
 PRIVACY = """
 <h2>Sans compte</h2>
 <p>Vos jeux, joueurs, parties et photos sont stockés uniquement sur votre téléphone ; aucun n'est jamais envoyé ailleurs. Les sauvegardes sont un fichier que vous créez et gardez.</p>
 <p>L'app demande bien à Google Firebase quelques réglages marche/arrêt qui indiquent les fonctions proposées (Firebase Remote Config). Pour répondre, Firebase utilise un identifiant d'installation que Google attribue à l'app et des informations de base sur l'app et le téléphone, comme la version de l'app, la version du système et la langue. Cela ne contient ni votre nom ni rien de ce que vous avez enregistré.</p>
+
+<h2>Données d'usage anonymes (facultatif)</h2>
+<p>Désactivé par défaut. Vous pouvez l'activer à l'accueil ou dans Réglages &rarr; Confidentialité, et le désactiver à tout moment. Lorsqu'il est activé, l'app envoie quelques compteurs via Google Firebase Analytics pour savoir quoi améliorer : par exemple qu'une partie a été enregistrée (saisie rapide ou en direct), la durée d'une mise à jour, la page de statistiques ouverte ou si un réglage est activé. Cela n'inclut jamais les noms de vos jeux, joueurs ou groupes, ni votre compte ou votre e-mail, et n'utilise pas l'identifiant publicitaire et ne vous suit pas dans d'autres apps. Google attribue à l'app un identifiant anonyme pour compter les installations. Désactiver l'option arrête l'envoi et demande à Google de supprimer les données liées à cet identifiant ; supprimer votre compte fait de même.</p>
 
 <h2>Avec un compte</h2>
 <p>Vous pouvez vous connecter avec Apple ou Google (facultatif) et activer la synchronisation dans le cloud. L'app stocke alors ceci dans Google Firebase, dans le compte avec lequel vous vous êtes connecté :</p>
