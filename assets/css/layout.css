@@ -54,3 +54,4 @@
 }
 
 .footer-legal a, .footer-nav a { color: inherit; }
+.footer-nav a { display: inline-block; padding-block: 0.7rem; }   /* a 44px target */
