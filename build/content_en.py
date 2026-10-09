@@ -136,7 +136,7 @@ T = {
                     "Sign in with Apple or with Google.",
                     "To keep your games on every phone you use, open <strong>Cloud</strong> and choose <strong>Upload my games</strong>. The app makes a backup first, uploads, checks both sides match and only then turns the sync on.",
                 ],
-                "shots": [],
+                "shots": [('20-cloud-off', 'The Cloud screen before signing in.', 'Before signing in'), ('22-cloud-on', 'The Cloud screen with the sync on.', 'Sync on')],
                 "tip": "Everything else works without an account. Sharing a group, a game or a match in progress needs one.",
             },
             {
@@ -148,7 +148,7 @@ T = {
                     "Your friend signs in, opens <strong>Join a group</strong> and types the code, scans the QR or opens the link.",
                     "When they join, the app asks <strong>which player are you</strong>, so their matches and stats show as <em>You</em>.",
                 ],
-                "shots": [("19-players", "The Players tab with the groups listed first.", "The Players tab")],
+                "shots": [('23-groups', 'The Players tab with the groups listed first.', 'Your groups'), ('25-invite', "A group's invite with its code and QR.", 'Invite people'), ('26-join-code', 'Typing a code to join a group.', 'Join with a code'), ('27-which-player', 'Choosing which player you are.', 'Which player are you?')],
                 "tip": "If a code ends up in the wrong hands, make a new one and the old one stops working.",
             },
             {
@@ -159,7 +159,7 @@ T = {
                     "In the match, choose <strong>Share live</strong> and then <strong>Start sharing</strong>. Copy the link or show the QR code.",
                     "Friends who have an account open the link and watch. They cannot change your score. Choose <strong>Stop sharing</strong> whenever you like.",
                 ],
-                "shots": [],
+                "shots": [('28-share-live-start', 'Starting to share a match live.', 'Share live'), ('29-share-live-qr', 'The link and QR of a match in progress.', 'Link and QR'), ('30-watching', 'A friend watching the score from their phone.', 'A friend watching')],
                 "tip": "Only a match in progress can be shared, and sharing stops by itself 24 hours after the match ends.",
             },
             {
@@ -171,7 +171,7 @@ T = {
                     "The person's page now offers <strong>This group</strong> and <strong>All groups</strong>. Each group keeps its own stats.",
                     "To undo it, choose <strong>Unlink</strong>. Nothing is lost.",
                 ],
-                "shots": [],
+                "shots": [('38-same-person-suggestion', 'The app suggesting that two people are the same.', 'A suggestion'), ('39-link-people', 'Linking a person to a profile in another group.', 'Link people')],
                 "tip": "<strong>Merge</strong> is only for a duplicate inside one group, for example the same friend typed twice.",
             },
             {
@@ -183,7 +183,7 @@ T = {
                     "A member who wants the owner to change the rules opens <strong>View rules</strong> and taps <strong>Propose changes</strong>, edits and sends it with a message.",
                     "The owner sees the proposals on the game, reads what changes and chooses <strong>Accept</strong> or <strong>Reject</strong>.",
                 ],
-                "shots": [],
+                "shots": [('31-shared-in-games', 'A shared game in the Games list.', 'A shared game'), ('32-shared-game-page', 'The page of a game shared by someone else.', 'Its page'), ('34-copy-page', 'The copy of a game, with whose game it is based on.', 'A copy'), ('35-share-with-group', 'Choosing the group to share a game with.', 'Share with a group'), ('37-proposal-review', 'The owner reviewing a proposed change.', 'Review a proposal')],
                 "tip": "You cannot take a group back once a game is shared with it. If the owner leaves the group, the game stays there as it was, but nobody can share it any further.",
             },
         ],

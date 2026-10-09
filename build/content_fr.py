@@ -136,7 +136,7 @@ T = {
                     "Connectez-vous avec Apple ou avec Google.",
                     "Pour garder vos jeux sur tous vos téléphones, ouvrez <strong>Cloud</strong> et choisissez <strong>Upload my games</strong>. L'app fait d'abord une sauvegarde, envoie, vérifie que les deux côtés correspondent et seulement alors active la synchronisation.",
                 ],
-                "shots": [],
+                "shots": [('20-cloud-off', "L'écran Cloud avant la connexion.", 'Avant la connexion'), ('22-cloud-on', "L'écran Cloud avec la synchronisation activée.", 'Synchronisation active')],
                 "tip": "Tout le reste fonctionne sans compte. Partager un groupe, un jeu ou une partie en cours en demande un.",
             },
             {
@@ -148,7 +148,7 @@ T = {
                     "Votre ami se connecte, ouvre <strong>Join a group</strong> et tape le code, scanne le QR ou ouvre le lien.",
                     "En rejoignant, l'app demande <strong>which player are you</strong> (quel joueur êtes-vous), pour que ses parties et statistiques s'affichent comme <em>You</em>.",
                 ],
-                "shots": [("19-players", "L'onglet Players avec les groupes en premier.", "L'onglet Players")],
+                "shots": [('23-groups', "L'onglet Joueurs avec les groupes en premier.", 'Vos groupes'), ('25-invite', "L'invitation d'un groupe avec son code et son QR.", 'Inviter des personnes'), ('26-join-code', 'Saisir un code pour rejoindre un groupe.', 'Rejoindre avec un code'), ('27-which-player', 'Choisir quel joueur vous êtes.', 'Quel joueur êtes-vous ?')],
                 "tip": "Si un code tombe entre de mauvaises mains, créez-en un nouveau : l'ancien cesse de fonctionner.",
             },
             {
@@ -159,7 +159,7 @@ T = {
                     "Dans la partie, choisissez <strong>Share live</strong> puis <strong>Start sharing</strong>. Copiez le lien ou montrez le code QR.",
                     "Les amis qui ont un compte ouvrent le lien et regardent. Ils ne peuvent pas changer votre score. Choisissez <strong>Stop sharing</strong> quand vous voulez.",
                 ],
-                "shots": [],
+                "shots": [('28-share-live-start', 'Commencer à partager une partie en direct.', 'Partager en direct'), ('29-share-live-qr', "Le lien et le QR d'une partie en cours.", 'Lien et QR'), ('30-watching', 'Un ami qui suit le score depuis son téléphone.', 'Un ami qui regarde')],
                 "tip": "Seule une partie en cours peut être partagée, et le partage s'arrête tout seul 24 heures après la fin de la partie.",
             },
             {
@@ -171,7 +171,7 @@ T = {
                     "La page de la personne propose alors <strong>This group</strong> et <strong>All groups</strong>. Chaque groupe garde ses statistiques.",
                     "Pour annuler, choisissez <strong>Unlink</strong>. Rien n'est perdu.",
                 ],
-                "shots": [],
+                "shots": [('38-same-person-suggestion', "L'app suggère que deux personnes sont la même.", 'Une suggestion'), ('39-link-people', "Lier une personne à un profil d'un autre groupe.", 'Lier des personnes')],
                 "tip": "<strong>Merge</strong> sert seulement pour un doublon dans un groupe, par exemple le même ami saisi deux fois.",
             },
             {
@@ -183,7 +183,7 @@ T = {
                     "Un membre qui veut que le propriétaire change les règles ouvre <strong>View rules</strong> et touche <strong>Propose changes</strong>, modifie et l'envoie avec un message.",
                     "Le propriétaire voit les propositions sur le jeu, lit ce qui change et choisit <strong>Accept</strong> ou <strong>Reject</strong>.",
                 ],
-                "shots": [],
+                "shots": [('31-shared-in-games', 'Un jeu partagé dans la liste des Jeux.', 'Un jeu partagé'), ('32-shared-game-page', "La page d'un jeu partagé par quelqu'un d'autre.", 'Sa page'), ('34-copy-page', "La copie d'un jeu, avec le jeu dont elle est issue.", 'Une copie'), ('35-share-with-group', 'Choisir le groupe avec lequel partager un jeu.', 'Partager avec un groupe'), ('37-proposal-review', 'Le propriétaire examine une modification proposée.', 'Examiner une proposition')],
                 "tip": "Vous ne pouvez pas retirer un groupe à un jeu une fois partagé. Si le propriétaire quitte le groupe, le jeu y reste tel quel, mais personne ne peut plus le partager.",
             },
         ],
