@@ -79,3 +79,10 @@
 
 .names { display: grid; gap: var(--space-2); max-width: var(--measure); }
 .names p { color: var(--muted); }
+
+/* A few screens of the app, one row. */
+.screens { display: grid; gap: var(--space-3); grid-template-columns: repeat(3, minmax(0, 15rem)); justify-content: start; margin: 0; padding: 0; list-style: none; }
+@media (max-width: 40rem) {
+  .screens { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: min(14rem, 64%); overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 0.5rem; }
+  .screens > li { scroll-snap-align: start; }
+}

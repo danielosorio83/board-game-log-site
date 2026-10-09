@@ -17,6 +17,23 @@
   gap: var(--space-1) var(--space-3);
 }
 
+/* The tools on the right of the header: the pages, the language and the theme. */
+.header-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-3);
+}
+
+/* On a phone the brand, the language and the theme share the first row, and the pages go under them. */
+@media (max-width: 40rem) {
+  .header-tools { display: contents; }
+  .site-header .brand { order: 1; margin-right: auto; }
+  .lang-nav { order: 2; }
+  .theme-toggle { order: 3; }
+  .main-nav { order: 4; flex-basis: 100%; }
+}
+
 .site-footer {
   margin-top: var(--space-6);
   padding-block: var(--space-4) var(--space-5);

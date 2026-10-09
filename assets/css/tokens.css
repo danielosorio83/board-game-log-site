@@ -54,8 +54,10 @@
   --page: 68rem;
 }
 
+/* Dark: by the phone's setting, unless the visitor chose light; and whenever the visitor chose dark. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --ground: #1f0f0c;
     --card: #2d1915;
     --ink: #f7ebd9;
@@ -67,3 +69,16 @@
     --focus: #fec742;
   }
 }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #1f0f0c;
+  --card: #2d1915;
+  --ink: #f7ebd9;
+  --muted: #bfa89b;
+  --line: #4a2b24;
+  --soft: #4a3418;
+  --action: #fec742;
+  --on-action: #2b1511;
+  --focus: #fec742;
+}
+:root[data-theme="light"] { color-scheme: light; }

@@ -72,3 +72,58 @@
   border-radius: var(--radius-lg);
   background: var(--soft);
 }
+
+/* Language switch: EN / ES / FR, the current one marked. */
+.lang { display: flex; margin: 0; padding: 0; list-style: none; font-size: var(--text-sm); font-weight: 700; }
+.lang a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 0.55rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+.lang a:hover { color: var(--ink); }
+.lang a[aria-current="true"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--action); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+
+/* Theme button: shows the moon in the light theme and the sun in the dark one. */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--soft); }
+.theme-toggle svg { width: 1.3rem; height: 1.3rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .icon-sun { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+/* A screenshot of the app: the light and the dark version, the one for the current theme shows. */
+.shot { margin: 0; display: grid; gap: 0.5rem; justify-items: center; }
+.shot picture, .shot img { display: block; }
+.shot img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: var(--card);
+}
+.shot .dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shot .light { display: none; }
+  :root:not([data-theme="light"]) .shot .dark { display: block; }
+}
+:root[data-theme="dark"] .shot .light { display: none; }
+:root[data-theme="dark"] .shot .dark { display: block; }
+.shot figcaption { color: var(--muted); font-size: var(--text-sm); text-align: center; text-wrap: balance; }

@@ -103,3 +103,19 @@
   font-size: 0.95rem;
 }
 @media (prefers-reduced-motion: reduce) { .guide > summary::after { transition: none; } }
+
+/* Screenshots under the steps of a guide: a row you can swipe on a phone. */
+.shots {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(15rem, 62%);
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0 0 0.5rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+.shots > li { scroll-snap-align: start; }
+@media (min-width: 52rem) { .shots { grid-auto-columns: 13rem; } }
+.how-note { max-width: var(--measure); color: var(--muted); font-size: var(--text-sm); }

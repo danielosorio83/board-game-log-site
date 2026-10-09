@@ -1,42 +1,32 @@
-# Board Game Log: website
+# boardgamelog.app
 
-The site of the Board Game Log app, <https://boardgamelog.app>. Plain HTML and CSS, no build step, no tracking, no third-party requests (the fonts are served from here). GitHub Pages publishes the `master` branch.
+The website of Board Game Log: a static site served by GitHub Pages from `master`, with the domain in `CNAME`. English is at the root, Spanish under `/es/` and French under `/fr/`.
+
+## Editing
+
+The pages are generated. Change the text in `build/content_en.py` (the source), then the same keys in `content_es.py` and `content_fr.py`, and run:
+
+```
+python3 build/build.py
+```
+
+It rewrites every page (`index.html`, `how-to/`, `support/`, `privacy/`, `terms/` in each language), `404.html` and `sitemap.xml`. Do not edit the generated HTML by hand. The layout (header, footer, language links, theme button, hreflang tags) lives in `build/build.py`.
 
 ## Layout
 
-```
-index.html              Home
-how-to/index.html       How-to videos
-support/index.html      Support and common questions
-privacy/index.html      Privacy policy
-terms/index.html        Terms of use, with the note on game names and trademarks
-404.html                Page not found
-privacy.html, support.html, terms.html
-                        Old addresses: they send the visitor to the new page (the app and
-                        the App Store listing of version 1 point to them). Do not delete.
-CNAME                   The custom domain
-robots.txt, sitemap.xml Search engines
-assets/
-  css/                  tokens.css (colors, type, space) → base.css → layout.css → components.css
-    pages/              home.css, content.css (one per kind of page)
-  fonts/                Bricolage Grotesque and Figtree, woff2 subsets, and their licenses
-  img/                  Logo, favicons, touch icon, social preview, hexagon pattern
-  video/                How-to videos (self-hosted ones; the page can embed YouTube instead)
-```
+- `assets/css/` tokens (colors and type, light and dark), base, layout, components, and one file per kind of page (`pages/home.css`, `pages/content.css`).
+- `assets/js/site.js` the theme button and the guides that open from a link. The site works without it.
+- `assets/img/app/{light,dark}/` screenshots of the app, one per theme (webp, 540 px wide). They use made-up games and players and no game from the catalog.
+- `assets/fonts/` self-hosted Bricolage Grotesque and Figtree (SIL Open Font License).
 
-Every address is absolute from the root (`/assets/...`), so the site is meant to be served at the root of its domain.
+## Theme
 
-## Working on it
+The site follows the phone's light or dark setting. The button in the header lets the visitor choose, and the choice is kept in the browser (`localStorage`, key `theme`). `data-theme="light|dark"` on `<html>` overrides the system setting.
 
-Preview: `python3 -m http.server 8000` in this folder, then open <http://localhost:8000>.
+## Screenshots
 
-- **Colors and type** live in `assets/css/tokens.css`, the same palette as the app ("Brick and cream" by day, "Night table" by night, chosen by the visitor's system).
-- **Header and footer** are repeated in each page (no templating): change them in every `index.html`.
-- **A new page**: copy `support/index.html` to `<name>/index.html`, change the `<title>`, description, canonical and Open Graph tags, and add it to `sitemap.xml` and to the footer.
-- **A video**: replace the `.soon` block of its card in `how-to/index.html` with the YouTube `<iframe>` (the comment above it has the line to paste).
-- **The copyright line** is in each footer (`© 2026 Board Game Log`); the trademark note is in the footers, on the home and in `terms/`.
-- **Images**: `assets/img/og-image.png` is 1200×630; the logo is the app icon without its margin.
+They come from the app's UI test `HowToScreenshotsTests` (in the app repository), run once in light and once in dark (`xcrun simctl ui booted appearance light|dark`) on an iPhone 17 simulator with a clean status bar (`xcrun simctl status_bar booted override --time 9:41 ...`). Convert with `cwebp -q 82 -resize 540 0 in.png -o out.webp`.
 
-## Names
+## Checks before publishing
 
-Game names shown in the app belong to their owners; the site and the app say so (see `terms/#game-names`). Contact: <support@boardgamelog.app>.
+No game names anywhere (not the catalog's, not the built-in one), links and anchors that resolve, no horizontal overflow at 320 and 390 px, tap targets of at least 44 px.
